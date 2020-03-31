@@ -9,6 +9,7 @@ import gym
 from tqdm import tqdm
 
 from Noiser import Noiser
+from Painter import draw
 
 
 def td3_update(step):
@@ -100,7 +101,7 @@ def train_draft():
             test_rewards.append(
                 np.mean(test())
             )
-            print(f"episode: {id_episode} | exploit reward: {test_rewards[-1]:.3f}")
+            print(f"episode: {id_episode} --- reward: {test_rewards[-1]:.3f}")
 
     return train_rewards, test_rewards
 
@@ -113,3 +114,4 @@ if __name__ == "__main__":
     critic = Critic.define_critic(env, config)
     replay_buffer = MemoryReplay(config)
     train_rewards, test_rewards = train_draft()
+    draw(train_rewards=train_rewards, test_rewards=test_rewards, config=config)
