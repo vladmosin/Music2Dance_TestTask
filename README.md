@@ -16,4 +16,4 @@ batch_size
 
 To change parameter run python train.py --parameter value
 
-Graphics are saved in "gr" 
+Graphics are saved in "graphics" folder 
