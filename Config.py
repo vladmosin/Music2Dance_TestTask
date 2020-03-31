@@ -37,7 +37,7 @@ class Config:
         parser.add_argument("--batch_size", type=int, default=256)
         parser.add_argument("--actor_lr", type=float, default=2e-4)
         parser.add_argument("--critic_lr", type=float, default=1e-4)
-        parser.add_argument("--max_episodes", type=int, default=10)
+        parser.add_argument("--max_episodes", type=int, default=1000)
         parser.add_argument("--max_timestamps", type=int, default=500)
         parser.add_argument("--sigma", type=float, default=0.6)
         parser.add_argument("--theta", type=float, default=0.15)
