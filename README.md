@@ -1,4 +1,4 @@
-**Implementation of TD3 algorithm**
+## Implementation of TD3 algorithm
 
 Constants are set in config to work on "BipedalWalker-v2" environment
 
