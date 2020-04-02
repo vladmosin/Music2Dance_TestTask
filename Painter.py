@@ -1,4 +1,4 @@
-"""from Config import Config
+from Config import Config
 from plotly import graph_objects as go
 import plotly
 from datetime import datetime
@@ -22,4 +22,3 @@ def draw(train_rewards, test_rewards, config: Config):
     cur_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     Path("graphics").mkdir(parents=True, exist_ok=True)
     plotly.offline.plot(fig, filename="graphics/Chart_{}.html".format(cur_time), auto_open=False)
-"""

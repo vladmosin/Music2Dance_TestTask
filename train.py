@@ -13,7 +13,7 @@ from tqdm import tqdm
 import pandas as pd
 
 from Noiser import Noiser
-#from Painter import draw
+from Painter import draw
 
 
 def td3_update(step):
@@ -118,8 +118,4 @@ if __name__ == "__main__":
     critic = Critic.define_critic(env, config)
     replay_buffer = MemoryReplay(config)
     train_rewards, test_rewards = train_draft()
-    #draw(train_rewards=train_rewards, test_rewards=test_rewards, config=config)
-
-    cur_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    Path("graphics").mkdir(parents=True, exist_ok=True)
-    pd.DataFrame.from_dict({"train": train_rewards, "test": test_rewards}).to_csv("graphics/{}.csv".format(cur_time))
+    draw(train_rewards=train_rewards, test_rewards=test_rewards, config=config)
