@@ -2,7 +2,7 @@
 
 Constants are set in config to work on "BipedalWalker-v2" environment
 
-To run program with default settings just type python train.py
+To run program with default settings just type `python train.py`
 
 The next settings may be changed:
 gamma, tau, actor_lr, critic_lr,
